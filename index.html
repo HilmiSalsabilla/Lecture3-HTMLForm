@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+</head>
+<body style="background-color: #eee;">
+    <!-- header -->
+    <header style="background-color: #333; padding: 20px 10px; text-align: center;">
+        <h1>
+            <a href="index.html" style="text-decoration: none; color: white;">Student Registration Form</a>
+        </h1>
+
+        <nav>
+            <ul style="list-style: none; display: flex; flex-direction: row; gap: 20px; margin: 0; padding: 0; justify-content: center;">
+                <li>
+                    <a href="#personal-info" style="color: white; text-decoration: none;">Personal Information</a>
+                </li>
+                <li>
+                    <a href="#academic-info" style="color: white; text-decoration: none;">Academic Information</a>
+                </li>
+                <li>
+                    <a href="#interest" style="color: white; text-decoration: none;">Interest</a>
+                </li>
+                <li>
+                    <a href="#add-info" style="color: white; text-decoration: none;">Additionals Information</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- main -->
+    <main style="padding: 30px; background: white; margin: 30px auto; border-radius: 10px;">
+        <form action="#" method="post">
+            <!-- personal information -->
+            <section id="personal-info" style="margin-bottom: 20px;">
+                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+                    <legend><strong>Personal Information</strong></legend>
+
+                    <!-- name -->
+                    <label for="name">Full Name:</label><br>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+
+                    <!-- email -->
+                    <label for="email">Email:</label><br>
+                    <input type="email" name="email" id="email" required placeholder="yourname@mail.com" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+
+                    <!-- password -->
+                    <label for="password">Password:</label><br>
+                    <input type="password" name="password" id="password" required placeholder="Enter your password" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+
+                    <!-- dob -->
+                    <label for="dof">Date of Birth:</label><br>
+                    <input type="date" name="dob" id="dob" required style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+
+                    <!-- gender -->
+                    <label for="gender">Gender:</label><br>  
+                    <input type="radio" name="gender" id="female" value="female" checked style="margin-right: 5px;">
+                    <label for="female">Female</label><br>
+                    <input type="radio" name="gender" id="male" value="male" style="margin-right: 5px;">
+                    <label for="male">Male</label>
+                </fieldset>
+            </section>
+
+            <!-- academic information -->
+            <section id="academic-info" style="margin-bottom: 20px;">
+                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+                    <legend><strong>Academic Information</strong></legend>
+
+                    <!-- major -->
+                    <label for="major">Major:</label><br>
+                    <select name="major" id="major" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;">
+                        <option value="">Select your major</option>
+                        <option value="Computer Engineering">Computer Engineering</option>
+                        <option value="System Information">System Information</option>
+                        <option value="Architecture">Architecture</option>
+                    </select><br><br>
+
+                    <!-- languages -->
+                    <label for="languages">Languages:</label><br>
+                    <input type="checkbox" id="english" name="languages" value="english" style="margin-right: 5px;">
+                    <label for="english">English</label><br>
+
+                    <input type="checkbox" id="indonesia" name="languages" value="indonesia" checked style="margin-right: 5px;">
+                    <label for="indonesia">Bahasa Indonesia</label><br><br>
+
+                    <!-- profile photo -->
+                    <label for="photo-profile">Upload Profile Photo:</label><br>
+                    <input type="file" name="photo-profile" id="photo-profile" accept="image/*" style="margin-right: 5px;">
+                </fieldset>
+            </section>
+
+            <!-- interest -->
+            <section id="interest" style="margin-bottom: 20px;">
+                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+                    <legend><strong>Interest</strong></legend>
+
+                    <!-- academic -->
+                    <label for="academic-int">Academic Interest:</label><br>
+                    <textarea name="academic-int" id="academic-int" cols="100" rows="5" placeholder="Subjects or topics you want to explore further" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea><br><br>
+
+                    <!-- extracurricular  -->
+                    <label for="extracurricular">Extracurricular:</label><br>
+                    <textarea name="extracurricular" id="extracurricular" cols="100" rows="5" placeholder="Clubs, sports, or organizations you're interested in" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea><br><br>
+
+                    <!-- career goals -->
+                    <label for="career-goals">Career goals:</label><br>
+                    <textarea name="career-goals" id="career-goals" cols="100" rows="5" placeholder="Your aspirations and career path goals" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea><br><br>
+                    
+                    <!-- hobbies -->
+                    <label for="hobbies">Hobbies:</label><br>
+                    <textarea name="hobbies" id="hobbies" cols="100" rows="5" placeholder="Your personal interests (music, travel, etc.)" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea>
+                </fieldset>
+            </section>
+
+            <!-- additionals information -->
+            <section id="add-info" style="margin-bottom: 20px;">
+                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+                    <legend><strong>Additionals Information</strong></legend>
+                    
+                    <p>You can provide any other information or notes you’d like us to know:</p>
+                    <textarea name="additional-info" id="additional-info" cols="100" rows="5" placeholder="Type here..." style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea>
+                </fieldset>
+            </section>
+
+            <!-- submit -->
+            <section id="submit" style="display: flex; justify-content: flex-end; gap: 10px;">
+                <button type="submit" style="padding: 10px; font-size: 14px; border-radius: 5px; background-color: skyblue;">Submit Form</button>
+                <button type="reset" style="padding: 10px; font-size: 14px; border-radius: 5px; background-color: yellow;">Reset</button>
+            </section>
+        </form>
+    </main>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px; ">
+        <p>&copy; 2025 by Hilmi Salsabilla</p>
+    </footer>
+</body>
+</html>
