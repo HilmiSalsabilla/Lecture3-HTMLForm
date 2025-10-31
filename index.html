@@ -4,135 +4,241 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Registration Form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #eee;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* header */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+        header h1 a {
+            text-decoration: none;
+            color: #eee;
+        }
+        nav ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 10px 0 0;
+            padding: 0;
+            justify-content: center;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #eee;
+        }
+
+        /* main */
+        main {
+            max-width: 900px;
+            background-color: #fff;
+            margin: 30px auto;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 25px;
+        }
+        legend {
+            margin: 10px 0 5px;
+            font-size: 20px;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-size: 16px;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 6px;
+        }
+        .inline-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        #submit {
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+            margin-top: 10px;
+        }
+        button {
+            background-color: #555;
+            color: #fff;
+            padding: 12px 25px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #333;
+        }
+
+        /* footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
 </head>
-<body style="background-color: #eee;">
+<body>
     <!-- header -->
-    <header style="background-color: #333; padding: 20px 10px; text-align: center;">
-        <h1>
-            <a href="index.html" style="text-decoration: none; color: white;">Student Registration Form</a>
-        </h1>
+    <header>
+        <h1><a href="index.html">Student Registration Form</a></h1>
 
         <nav>
-            <ul style="list-style: none; display: flex; flex-direction: row; gap: 20px; margin: 0; padding: 0; justify-content: center;">
-                <li>
-                    <a href="#personal-info" style="color: white; text-decoration: none;">Personal Information</a>
-                </li>
-                <li>
-                    <a href="#academic-info" style="color: white; text-decoration: none;">Academic Information</a>
-                </li>
-                <li>
-                    <a href="#interest" style="color: white; text-decoration: none;">Interest</a>
-                </li>
-                <li>
-                    <a href="#add-info" style="color: white; text-decoration: none;">Additionals Information</a>
-                </li>
+            <ul>
+                <li><a href="#personal-info">Personal Information</a></li>
+                <li><a href="#academic-info">Academic Information</a></li>
+                <li><a href="#interest">Interest</a></li>
+                <li><a href="#add-info">Additionals Information</a></li>
             </ul>
         </nav>
     </header>
 
     <!-- main -->
-    <main style="padding: 30px; background: white; margin: 30px auto; border-radius: 10px;">
+    <main>
         <form action="#" method="post">
             <!-- personal information -->
-            <section id="personal-info" style="margin-bottom: 20px;">
-                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+            <section id="personal-info">
+                <fieldset>
                     <legend><strong>Personal Information</strong></legend>
 
                     <!-- name -->
-                    <label for="name">Full Name:</label><br>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
 
                     <!-- email -->
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="email" id="email" required placeholder="yourname@mail.com" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email" required placeholder="yourname@mail.com">
 
                     <!-- password -->
-                    <label for="password">Password:</label><br>
-                    <input type="password" name="password" id="password" required placeholder="Enter your password" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" required placeholder="Enter your password">
 
                     <!-- dob -->
-                    <label for="dof">Date of Birth:</label><br>
-                    <input type="date" name="dob" id="dob" required style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;"><br><br>
+                    <label for="dof">Date of Birth:</label>
+                    <input type="date" name="dob" id="dob" required>
 
                     <!-- gender -->
-                    <label for="gender">Gender:</label><br>  
-                    <input type="radio" name="gender" id="female" value="female" checked style="margin-right: 5px;">
-                    <label for="female">Female</label><br>
-                    <input type="radio" name="gender" id="male" value="male" style="margin-right: 5px;">
-                    <label for="male">Male</label>
+                    <label for="gender">Gender:</label>
+                    <div class="inline-group">
+                        <input type="radio" name="gender" id="female" value="female" checked>
+                        <label for="female">Female</label>
+                        <input type="radio" name="gender" id="male" value="male">
+                        <label for="male">Male</label>
+                    </div>
                 </fieldset>
             </section>
 
             <!-- academic information -->
-            <section id="academic-info" style="margin-bottom: 20px;">
-                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+            <section id="academic-info">
+                <fieldset>
                     <legend><strong>Academic Information</strong></legend>
 
                     <!-- major -->
-                    <label for="major">Major:</label><br>
-                    <select name="major" id="major" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px; border: 1px solid #333;">
+                    <label for="major">Major:</label>
+                    <select name="major" id="major">
                         <option value="">Select your major</option>
                         <option value="Computer Engineering">Computer Engineering</option>
                         <option value="System Information">System Information</option>
                         <option value="Architecture">Architecture</option>
-                    </select><br><br>
+                    </select>
 
                     <!-- languages -->
-                    <label for="languages">Languages:</label><br>
-                    <input type="checkbox" id="english" name="languages" value="english" style="margin-right: 5px;">
-                    <label for="english">English</label><br>
-
-                    <input type="checkbox" id="indonesia" name="languages" value="indonesia" checked style="margin-right: 5px;">
-                    <label for="indonesia">Bahasa Indonesia</label><br><br>
+                    <label for="languages">Languages:</label>
+                    <div class="inline-group">
+                        <input type="checkbox" id="english" name="languages" value="english">
+                        <label for="english">English</label>
+                        <input type="checkbox" id="indonesia" name="languages" value="indonesia" checked>
+                        <label for="indonesia">Bahasa Indonesia</label>
+                    </div>
 
                     <!-- profile photo -->
-                    <label for="photo-profile">Upload Profile Photo:</label><br>
-                    <input type="file" name="photo-profile" id="photo-profile" accept="image/*" style="margin-right: 5px;">
+                    <label for="photo-profile">Upload Profile Photo:</label>
+                    <input type="file" name="photo-profile" id="photo-profile" accept="image/*">
                 </fieldset>
             </section>
 
             <!-- interest -->
-            <section id="interest" style="margin-bottom: 20px;">
-                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+            <section id="interest">
+                <fieldset>
                     <legend><strong>Interest</strong></legend>
 
                     <!-- academic -->
-                    <label for="academic-int">Academic Interest:</label><br>
-                    <textarea name="academic-int" id="academic-int" cols="100" rows="5" placeholder="Subjects or topics you want to explore further" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea><br><br>
+                    <label for="academic-int">Academic Interest:</label>
+                    <textarea name="academic-int" id="academic-int" placeholder="Subjects or topics you want to explore further"></textarea>
 
                     <!-- extracurricular  -->
-                    <label for="extracurricular">Extracurricular:</label><br>
-                    <textarea name="extracurricular" id="extracurricular" cols="100" rows="5" placeholder="Clubs, sports, or organizations you're interested in" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea><br><br>
+                    <label for="extracurricular">Extracurricular:</label>
+                    <textarea name="extracurricular" id="extracurricular" placeholder="Clubs, sports, or organizations you're interested in"></textarea>
 
                     <!-- career goals -->
-                    <label for="career-goals">Career goals:</label><br>
-                    <textarea name="career-goals" id="career-goals" cols="100" rows="5" placeholder="Your aspirations and career path goals" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea><br><br>
+                    <label for="career-goals">Career goals:</label>
+                    <textarea name="career-goals" id="career-goals" placeholder="Your aspirations and career path goals"></textarea>
                     
                     <!-- hobbies -->
-                    <label for="hobbies">Hobbies:</label><br>
-                    <textarea name="hobbies" id="hobbies" cols="100" rows="5" placeholder="Your personal interests (music, travel, etc.)" style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea>
+                    <label for="hobbies">Hobbies:</label>
+                    <textarea name="hobbies" id="hobbies" placeholder="Your personal interests (music, travel, etc.)"></textarea>
                 </fieldset>
             </section>
 
             <!-- additionals information -->
-            <section id="add-info" style="margin-bottom: 20px;">
-                <fieldset style="padding: 20px; border: 1px solid #333; border-radius: 10px;">
+            <section id="add-info">
+                <fieldset>
                     <legend><strong>Additionals Information</strong></legend>
                     
                     <p>You can provide any other information or notes you’d like us to know:</p>
-                    <textarea name="additional-info" id="additional-info" cols="100" rows="5" placeholder="Type here..." style="width: 98%; padding: 10px; font-size: 16px; border-radius: 5px;"></textarea>
+                    <textarea name="additional-info" id="additional-info" placeholder="Type here..."></textarea>
                 </fieldset>
             </section>
 
             <!-- submit -->
-            <section id="submit" style="display: flex; justify-content: flex-end; gap: 10px;">
-                <button type="submit" style="padding: 10px; font-size: 14px; border-radius: 5px; background-color: skyblue;">Submit Form</button>
-                <button type="reset" style="padding: 10px; font-size: 14px; border-radius: 5px; background-color: yellow;">Reset</button>
+            <section id="submit">
+                <button type="submit">Submit Form</button>
+                <button type="reset">Reset</button>
             </section>
         </form>
     </main>
 
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px; ">
+    <footer>
         <p>&copy; 2025 by Hilmi Salsabilla</p>
     </footer>
 </body>
